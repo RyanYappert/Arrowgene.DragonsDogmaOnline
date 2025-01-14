@@ -28,7 +28,7 @@ namespace Arrowgene.Ddon.GameServer.Handler
                 foreach (CDataGatheringItemGetRequest gatheringItemRequest in request.GatheringItemGetRequestList)
                 {
                     InstancedGatheringItem dropItem = items[(int)gatheringItemRequest.SlotNo];
-                    Server.ItemManager.GatherItem(Server, client.Character, ntc, dropItem, gatheringItemRequest.Num, connection);
+                    Server.ItemManager.GatherItem(client.Character, ntc, dropItem, gatheringItemRequest.Num, connection);
                 }
             });
             client.Send(ntc);
